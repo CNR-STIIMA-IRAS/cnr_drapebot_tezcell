@@ -1,11 +1,15 @@
 action_name: "/tez_1_moveit_lab/follow_joint_trajectory"
 mqtt_topic: "/robot_1/joint_trajectory"
-broker_address: "169.254.57.188"
+#broker_address: 172.31.1.11
+broker_address: 192.168.12.204
+#broker_address: "localhost"
 port: 1883
-client_id: mqtt_converter
+client_id: "robot1/mqtt_converter"
 rate: 100
 
-joint_names: 
+robot_hw_ns: "/robot1_mqtt_hw"
+
+robot_joint_names: 
 - kr210_1_linear_axis_joint
 - kr210_1_joint_1
 - kr210_1_joint_2
