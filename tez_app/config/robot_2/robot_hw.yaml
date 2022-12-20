@@ -3,7 +3,6 @@ robot2_mqtt_hw:
   appenders      : [file, screen]
   levels         : [trace, debug]
   #pattern_layout : "[%5p][%d{HH:mm:ss,SSS}][%F:%M:%04L][%24c] %m%n"
-  #pattern_layout : "[%5p][%d{HH:mm,SSS}][%M:%04L][%24c] %m%n"
   file_name      : robot2_mqtt_hw
   sampling_period: 0.004
   diagnostic_period: 0.1
@@ -27,10 +26,10 @@ robot2_mqtt_hw:
 
   initial_position: [0.0, -1.57, 1.56, 1.57, 0.0, 0.0, 0.0] # [j1,j2,j3,j4,j5,j6,e0] last value is for the linear axis 
   
-  use_delta_target_pos: false
-  delta_pos_from_start: false
+#  use_delta_target_pos: false
+#  delta_pos_from_start: false
   
-  use_real_robot: true
+  use_real_robot: false
   verbose: false
   
   max_missing_cycles: 5
@@ -40,9 +39,9 @@ robot2_mqtt_hw:
   #--- MQTT ---
   
   client_id: "robot2/MQTT_HW"
-  host: 192.168.12.204    # drapebot
+  #host: 192.168.12.204    # drapebot
   #host: 172.31.1.11    # loris pc
-  #host: localhost
+  host: localhost
   port: 1883
   
   feedback_mqtt_topic: "/robot_2/feedback"
